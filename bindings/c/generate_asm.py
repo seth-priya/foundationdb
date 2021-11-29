@@ -59,7 +59,7 @@ def write_windows_asm(asmfile, functions):
 
 
 def write_unix_asm(asmfile, functions, prefix):
-    if cpu != "aarch64":
+    if cpu != "aarch64" and cpu!= "ppc64le":
         asmfile.write(".intel_syntax noprefix\n")
 
     if cpu == 'aarch64' or os == 'linux' or os == 'freebsd':
